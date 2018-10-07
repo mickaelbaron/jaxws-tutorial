@@ -13,7 +13,7 @@ Cet exercice consiste à appeler le service web défini dans l'exercice 1. Un cl
 
 * Assurez-vous que le programme principal du premier exercice est en cours d'exécution et que le WSDL du service web est toujours accessible.
 
-* Importer le projet Maven **jaxws-tutorial-exercice4** (**File -> Import -> Maven -> Existing Maven Projects** et choisir l'option **Select archive file** puis sélectionner l'archive).
+* Importer le projet Maven **jaxws-tutorial-exercice4** (**File -> Import -> Maven -> Existing Maven Projects**, choisir le répertoire du projet puis faire **Finish**.
 
 * Pour modifier la génération des classes artifacts des informations supplémentaires peuvent être indiquées dans un fichier binding. Créer un fichier nommé *binding.xml* stocké dans le répertoire *src/jaxws* dont le contenu est le suivant.
 

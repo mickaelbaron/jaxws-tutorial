@@ -12,7 +12,7 @@ Le service web de ce premier exercice consiste à fournir des opérations pour l
 
 * Démarrer l'environnement de développement Eclipse.
 
-* Importer le projet Maven **jaxws-tutorial-exercice1** (**File -> Import -> Maven -> Existing Maven Projects** et choisir l'option **Select archive file** puis sélectionner l'archive).
+* Importer le projet Maven **jaxws-tutorial-exercice1** (**File -> Import -> Maven -> Existing Maven Projects**, choisir le répertoire du projet puis faire **Finish**.
 
 * Depuis le package `fr.mickaelbaron.jaxwstutorialexercice1`, créer une classe qui représentera une personne (**File -> New** puis choisir **Class**). Appeler la classe `Person` et la définir dans le package `fr.mickaelbaron.jaxwstutorialexercice1`.
 

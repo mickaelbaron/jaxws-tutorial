@@ -12,7 +12,7 @@ Cet exercice consiste à appeler le service web défini depuis l'exercice 1. Des
 
 * Assurez-vous que le programme principal de l'exercice 1 est en cours d'exécution et que le WSDL du service web est toujours accessible.
 
-* Importer le projet Maven **jaxws-tutorial-exercice3** (**File -> Import -> Maven -> Existing Maven Projects** et choisir l'option **Select archive file** puis sélectionner l'archive).
+* Importer le projet Maven **jaxws-tutorial-exercice3** (**File -> Import -> Maven -> Existing Maven Projects**, choisir le répertoire du projet puis faire **Finish**.
 
 * Compléter le fichier de description Maven *pom.xml* existant afin de générer les classes artifacts.
 
