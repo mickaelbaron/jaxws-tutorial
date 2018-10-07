@@ -4,4 +4,20 @@
 
 <web-app>
 	<display-name>jaxws-tutorial-exercice6</display-name>
+	<listener>
+		<listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+	</listener>
+	<servlet>
+		<display-name>notebookservice</display-name>
+		<servlet-name>notebookservice</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>notebookservice</servlet-name>
+		<url-pattern>/notebookservice</url-pattern>
+	</servlet-mapping>
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
 </web-app>

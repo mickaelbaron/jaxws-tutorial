@@ -1,16 +1,14 @@
-package fr.mickaelbaron.jaxwstutorialexercice5;
+package fr.mickaelbaron.jaxwstutorialexercice1;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.jws.HandlerChain;
 import javax.jws.WebService;
 
 /**
  * @author Mickael BARON (baron.mickael@gmail.com)
  */
-@WebService(endpointInterface = "fr.mickaelbaron.jaxwstutorialexercice5.NotebookService", serviceName = "NotebookService", portName = "NotebookPort")
-@HandlerChain(file = "handler.xml")
+@WebService(endpointInterface = "fr.mickaelbaron.jaxwstutorialexercice1.NotebookService", serviceName = "NotebookService", portName = "NotebookPort")
 public class NotebookServiceImpl implements NotebookService {
 
 	private List<Person> persons = new ArrayList<Person>();

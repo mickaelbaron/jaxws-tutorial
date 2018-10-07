@@ -69,7 +69,7 @@ public class NotebookWebServiceTest {
         myPerson.setAddress("NewAddress");
 
         // When
-        // To complete
+        boolean addPerson = notebookPort.addPerson(myPerson);
 
         // Then
         Assert.assertTrue(addPerson);
@@ -79,7 +79,7 @@ public class NotebookWebServiceTest {
     public void getPersonsTest() {
         // Given
         // When
-        // To complete
+        List<Person> persons = notebookPort.getPersons();
 
         // Then
         Assert.assertTrue(persons.size() >= 2);
@@ -88,10 +88,10 @@ public class NotebookWebServiceTest {
     @Test
     public void getPersonAtTest() {
         // Given
-        // To complete
+        String name = "Mickael Baron";
 
         // When
-        // To complete
+        Person personAt = notebookPort.getPersonAt(name);
 
         // Then
         Assert.assertNotNull(personAt);

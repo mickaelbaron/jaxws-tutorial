@@ -154,11 +154,11 @@ public class NotebookWebServicePublisher {
 
 ![Console exercice 1](./images/exercice1-console.png "Console exercice 1")
 
-* Afficher la description WSDL de votre service web <http://localhost:9991/ws/notebookservice?wsdl> et comparer le résultat par rapport à ce qui a été défini dans l'interface Java.
+* Afficher la description WSDL de votre service web <http://localhost:9991/ws/notebookservice?wsdl> et comparer le résultat par rapport à ce qui a été défini dans l'interface Java. 
 
 Pour tester le comportement du service web, vous utiliserez l'outil SOAP-UI (voir [atelier 1](http://mbaron.developpez.com/tutoriels/soa/soapui-tests-fonctionnels-services-web/ "atelier 1")).
 
-Nous allons nous intéresser à générer le document WSDL à partir de Maven.
+Nous allons nous intéresser à générer le document WSDL à partir de Maven. 
 
 * Depuis Eclipse, exécuter la configuration d'exécution appelée *wsgen1 (clean and process-classes)*.
 

@@ -50,12 +50,12 @@
 							<goal>wsimport</goal>
 						</goals>
 						<configuration>
-							<packageName>TODO</packageName>
-							<sourceDestDir>TODO</sourceDestDir>
+							<packageName>fr.mickaelbaron.jaxwstutorialexercice2</packageName>
+							<sourceDestDir>${project.build.directory}/generated-sources/jaxws-wsimport</sourceDestDir>
 							<keep>true</keep>
 							<executable>${java.home}/bin/wsimport</executable>
 							<wsdlUrls>
-								<wsdlUrl>TODO</wsdlUrl>
+								<wsdlUrl>http://localhost:9991/ws/notebookservice?wsdl</wsdlUrl>
 							</wsdlUrls>
 						</configuration>
 					</execution>
