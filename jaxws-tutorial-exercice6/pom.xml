@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>fr.mickaelbaron</groupId>
+	<artifactId>jaxws-tutorial-exercice6</artifactId>
+	<version>0.1-SNAPSHOT</version>
+	<packaging>${project.packaging}</packaging>
+	<properties>
+		<maven.compiler.version>3.1</maven.compiler.version>
+		<maven.compiler.source>10</maven.compiler.source>
+		<maven.compiler.target>10</maven.compiler.target>
+
+		<jaxws.version>2.3.0.2</jaxws.version>
+		<activation.version>1.1-rev-1</activation.version>
+		<jaxws.maven.version>2.5</jaxws.maven.version>
+		<maven.dependency.version>3.1.1</maven.dependency.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.sun.xml.ws</groupId>
+			<artifactId>jaxws-rt</artifactId>
+			<version>${jaxws.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>${activation.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>ws</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.version}</version>
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<profiles>
+		<profile>
+			<id>jar</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<project.packaging>jar</project.packaging>
+			</properties>
+		</profile>
+		<profile>
+			<id>war</id>
+			<properties>
+				<project.packaging>war</project.packaging>
+			</properties>
+		</profile>
+	</profiles>
+</project>
