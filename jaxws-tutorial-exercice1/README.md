@@ -169,3 +169,5 @@ $ mvn clean package
 ```
 
 * Vérifier depuis le répertoire *target/generated-sources/wsdl* la présence du document WSDL.
+
+* Déterminer dans le fichier *pom.xml*, le plugin qui permet de générer automatiquement le contrat WSDL.

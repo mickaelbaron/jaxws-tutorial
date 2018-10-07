@@ -29,7 +29,7 @@ Dans cet exercice un intercepteur est ajouté au service web décrivant le carne
 </handler-chains>
 ```
 
-* Ajouter une nouvelle classe intitulée « SOAPLoggingHandler » dont le code est défini de la manière suivante.
+* Ajouter une nouvelle classe intitulée `SOAPLoggingHandler` dont le code est défini de la manière suivante.
 
 ```java
 package fr.mickaelbaron.jaxwstutorialexercice5;
