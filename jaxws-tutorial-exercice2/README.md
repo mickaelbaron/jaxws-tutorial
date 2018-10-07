@@ -14,7 +14,7 @@ Dans cet exercice, nous développons un service web à partir de sa description 
 
 * Assurez-vous que le programme principal du premier exercice est en cours d'exécution et que le WSDL du service web est toujours accessible.
  
-* Importer le projet Maven **jaxws-tutorial-exercice2** (**File -> Import -> Maven -> Existing Maven Projects** et choisir l'option **Select archive file** puis sélectionner l'archive).
+* Importer le projet Maven **jaxws-tutorial-exercice2** (**File -> Import -> Maven -> Existing Maven Projects**, choisir le répertoire du projet puis faire **Finish**.
 
 * Afin de générer les classes (artifacts), nous utilisons l'outil **wsimport** par l'intermédiaire de Maven. Compléter le fichier de description Maven *pom.xml* existant.
 

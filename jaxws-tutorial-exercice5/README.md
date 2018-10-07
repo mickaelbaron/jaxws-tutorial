@@ -11,7 +11,7 @@ Dans cet exercice un intercepteur est ajouté au service web décrivant le carne
 
 ## Étapes à suivre
 
-* Importer le projet Maven **jaxws-tutorial-exercice5** (**File -> Import -> Maven -> Existing Maven Projects** et choisir l'option **Select archive file** puis sélectionner l'archive).
+* Importer le projet Maven **jaxws-tutorial-exercice5** (**File -> Import -> Maven -> Existing Maven Projects**, choisir le répertoire du projet puis faire **Finish**.
 
 * Dans la classe `NotebookServiceImpl`, ajouter l'annotation `@HandlerChain(file = "handler.xml")` au niveau de la description de la classe.
 
