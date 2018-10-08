@@ -44,7 +44,7 @@ Cet exercice consiste à appeler le service web défini dans l'exercice 1. Un cl
 * Compléter la classe *NotebookWebServiceAsynchronousClient*
 
 ```java
-package soa.jaxwslabs.notebookwebserviceexercice4;
+package fr.mickaelbaron.jaxwstutorialexercice4;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
