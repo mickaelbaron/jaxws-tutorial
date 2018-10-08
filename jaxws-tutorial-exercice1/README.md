@@ -150,11 +150,9 @@ public class NotebookWebServicePublisher {
 }
 ```
 
-* Exécuter la classe `NotebookWebServicePublisher` pour démarrer votre service web. Vous remarquerez sur la console les messages suivants.
+* Exécuter la classe `NotebookWebServicePublisher` pour démarrer votre service web. Selon la version de Java que vous utilisez, différents messages d'avertissement seront affichés.
 
-![Console exercice 1](./images/exercice1-console.png "Console exercice 1")
-
-* Afficher la description WSDL de votre service web <http://localhost:9991/ws/notebookservice?wsdl> et comparer le résultat par rapport à ce qui a été défini dans l'interface Java. 
+* Afficher la description WSDL de votre service web <http://localhost:9991/ws/notebookservice?wsdl> et comparer le résultat par rapport à ce qui a été défini dans l'interface Java.
 
 Pour tester le comportement du service web, vous utiliserez l'outil SOAP-UI (voir [atelier 1](http://mbaron.developpez.com/tutoriels/soa/soapui-tests-fonctionnels-services-web/ "atelier 1")).
 
