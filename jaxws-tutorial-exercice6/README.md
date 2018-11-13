@@ -15,13 +15,13 @@ Dans cet exercice nous allons réaliser deux types de déploiement d'un service 
 
 * Saisir la ligne de commande suivante depuis la racine du projet pour compiler et construire le fichier jar du projet.
 
-```
-$ mvn clean package
+```shellscript
+mvn clean package
 ```
 
 * Saisir la ligne de commande suivante pour démarrer le projet.
 
-```
+```shellscript
 $ java -cp "target/ws.jar" fr.mickaelbaron.jaxwstutorialexercice6.NotebookWebServicePublisher
 Exception in thread "main" java.lang.NoClassDefFoundError: javax/xml/ws/Endpoint
         at fr.mickaelbaron.jaxwstutorialexercice6.NotebookWebServicePublisher.main(NotebookWebServicePublisher.java:10)
@@ -55,8 +55,8 @@ Vous remarquerez que le projet de démarre pas du fait de l'absence de certaines
 
 * Saisir les lignes de commande suivantes pour compiler, construire et démarrer le projet.
 
-```
-$ mvn clean package
+```shellscript
+mvn clean package
 ...
 $ java -cp "target/classes:target/dependency/*" fr.mickaelbaron.jaxwstutorialexercice6.NotebookWebServicePublisher
 ```
@@ -107,8 +107,8 @@ Le fichier *sun-jaxws.xml* est utilisé pour configurer l'accès au service web 
 
 * Saisir la ligne de commande suivante pour compiler et construire le projet vers un fichier war.
 
-```
-$ mvn clean package -P war
+```shellscript
+mvn clean package -P war
 ```
 
 > L'option -P war permet d'utiliser le profile Maven appelé war. Depuis le fichier _pom.xml_ examiner la balise `<profiles>`. Cette astuce permet de générer un fichier jar ou un fichier war depuis un même fichier _pom.xml_.
@@ -138,14 +138,14 @@ $ mvn clean package -P war
 
 * Saisir la ligne de commande suivante pour télécharger une image Docker de Tomcat
 
-```
-$ docker pull tomcat:9.0.12-jre10-slim
+```shellscript
+docker pull tomcat:9.0.12-jre10-slim
 ```
 
 * Enfin, saisir la ligne de commande suivante pour créer un conteneur Docker qui permettra de démarrer une instance de Tomcat. Le fichier `ws.war` contient tous le code et dépendances de ce projet. 
 
-```
-$ docker run --rm --name helloworldservice-tomcat -v $(pwd)/target/ws.war:/usr/local/tomcat/webapps/ws.war -it -p 8080:8080 tomcat:9.0.12-jre10-slim
+```shellscript
+docker run --rm --name helloworldservice-tomcat -v $(pwd)/target/ws.war:/usr/local/tomcat/webapps/ws.war -it -p 8080:8080 tomcat:9.0.12-jre10-slim
 ```
 
 * Ouvrir un navigateur web et tester l'URL suivante : <http://localhost:8080/ws/notebookservice?wsdl> et visualiser le WSDL.

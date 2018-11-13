@@ -69,7 +69,7 @@ public class NotebookWebServiceTest {
         myPerson.setAddress("NewAddress");
 
         // When
-        // To complete
+        // TODO: appeler l'opération `addPerson`.
 
         // Then
         Assert.assertTrue(addPerson);
@@ -79,7 +79,7 @@ public class NotebookWebServiceTest {
     public void getPersonsTest() {
         // Given
         // When
-        // To complete
+        // TODO: appeler l'opération `getPersons`.
 
         // Then
         Assert.assertTrue(persons.size() >= 2);
@@ -88,10 +88,10 @@ public class NotebookWebServiceTest {
     @Test
     public void getPersonAtTest() {
         // Given
-        // To complete
+        // TODO: initialiser une variable à 'Mickael Baron'.
 
         // When
-        // To complete
+        // TODO: appeler l'opération `getPersonAt` avec la variable précédente.
 
         // Then
         Assert.assertNotNull(personAt);
