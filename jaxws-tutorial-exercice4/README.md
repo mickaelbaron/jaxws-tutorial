@@ -41,7 +41,7 @@ Cet exercice consiste à appeler le service web défini dans l'exercice 1. Un cl
 
 * Depuis Eclipse, exécuter la configuration d'exécution appelée *wsimport (clean and generate-sources)* comme pour les exercices 2 et 3.
 
-* Compléter la classe *NotebookWebServiceAsynchronousClient*
+* Compléter la classe _NotebookWebServiceAsynchronousClient_.
 
 ```java
 package fr.mickaelbaron.jaxwstutorialexercice4;
@@ -81,18 +81,14 @@ public class NotebookWebServiceAsynchronousClient extends JFrame {
 
                 textArea.append("addPerson operation has been invoked.\n");
 
-                NotebookService_Service service = new NotebookService_Service();
-                NotebookService port = service.getNoteBookPort();
+                // TODO: initialiser un service et un port.
 
-                port.addPersonAsync(newPerson, new AsyncHandler<AddPersonResponse>() {
-                    @Override
-                    public void handleResponse(Response<AddPersonResponse> res) {
-                        if (!res.isCancelled() && res.isDone()) {
-                            textArea.append("New Person added.\n");
-                            startButton.setEnabled(true);
-                        }
-                    }
-                });
+                // TODO: invoquer de manière asynchrone l'opération `addPerson` à partir du port précédent
+                // et faire appel au code suivant.
+                //     if (!res.isCancelled() && res.isDone()) {
+                //         textArea.append("New Person added.\n");
+                //         startButton.setEnabled(true);
+                //     }
             }
         });
 

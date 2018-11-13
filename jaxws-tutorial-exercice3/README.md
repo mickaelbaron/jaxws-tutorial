@@ -69,7 +69,7 @@ public class NotebookWebServiceTest {
         myPerson.setAddress("NewAddress");
 
         // When
-        boolean addPerson = notebookPort.addPerson(myPerson);
+        // TODO: appeler l'opération `addPerson`.
 
         // Then
         Assert.assertTrue(addPerson);
@@ -79,7 +79,7 @@ public class NotebookWebServiceTest {
     public void getPersonsTest() {
         // Given
         // When
-        List<Person> persons = notebookPort.getPersons();
+        // TODO: appeler l'opération `getPersons`.
 
         // Then
         Assert.assertTrue(persons.size() >= 2);
@@ -88,10 +88,10 @@ public class NotebookWebServiceTest {
     @Test
     public void getPersonAtTest() {
         // Given
-        String name = "Mickael Baron";
+        // TODO: initialiser une variable à 'Mickael Baron'.
 
         // When
-        Person personAt = notebookPort.getPersonAt(name);
+        // TODO: appeler l'opération `getPersonAt` avec la variable précédente.
 
         // Then
         Assert.assertNotNull(personAt);

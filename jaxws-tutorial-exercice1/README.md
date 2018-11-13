@@ -12,7 +12,7 @@ Le service web de ce premier exercice consiste à fournir des opérations pour l
 
 * Démarrer l'environnement de développement Eclipse.
 
-* Importer le projet Maven **jaxws-tutorial-exercice1** (**File -> Import -> Maven -> Existing Maven Projects**, choisir le répertoire du projet puis faire **Finish**.
+* Importer le projet Maven **jaxws-tutorial-exercice1** (**File -> Import -> Maven -> Existing Maven Projects**), choisir le répertoire du projet puis faire **Finish**.
 
 * Depuis le package `fr.mickaelbaron.jaxwstutorialexercice1`, créer une classe qui représentera une personne (**File -> New** puis choisir **Class**). Appeler la classe `Person` et la définir dans le package `fr.mickaelbaron.jaxwstutorialexercice1`.
 
@@ -55,11 +55,11 @@ public class Person {
 
 * Définir une interface Java représentant la description du service web (**File -> New** puis choisir **Interface**). Définir comme nom de l'interface `NotebookService` et utiliser le précédent package.
 
-*  Ajouter les méthodes suivantes dans l'interface `NotebookService` :
-    * `boolean addPerson(Person p)` : ajouter une nouvelle personne ;
-    * `List<Person> getPersons()` : récupérer toutes les personnes ;
-    * `Person getPersonAt(String name)` : récupérer une personne par son nom.
-*  Ajouter une annotation `@WebService` au niveau de l'interface puis initialiser ces attributs `name` à `NotebookService` et `targetNamespace` à `http://jaxwstutorialexercice1.mickaelbaron.fr`.
+* Ajouter les méthodes suivantes dans l'interface `NotebookService` :
+  * `boolean addPerson(Person p)` : ajouter une nouvelle personne ;
+  * `List<Person> getPersons()` : récupérer toutes les personnes ;
+  * `Person getPersonAt(String name)` : récupérer une personne par son nom.
+* Ajouter une annotation `@WebService` au niveau de l'interface puis initialiser ces attributs `name` à `NotebookService` et `targetNamespace` à `http://jaxwstutorialexercice1.mickaelbaron.fr`.
 
 ```java
 package fr.mickaelbaron.jaxwstutorialexercice1;
@@ -67,7 +67,8 @@ package fr.mickaelbaron.jaxwstutorialexercice1;
 import java.util.List;
 import javax.jws.WebService;
 
-@WebService(name = "NotebookService", targetNamespace="http://jaxwstutorialexercice1.mickaelbaron.fr")
+// TODO: définir l'interface en service web SOAP
+// en initialisant les attributs `name` et `targetNamespace`.
 public interface NotebookService {
 
     boolean addPerson(Person p);
@@ -81,9 +82,9 @@ public interface NotebookService {
 * Construire une nouvelle classe appelée `NotebookServiceImpl` qui implémente l'interface `NotebookService`.
 
 * Ajouter une annotation `@WebService` au niveau de la classe, puis modifier les attributs de l'annotation comme décrit ci-dessous :
-    * `endpointInterface = fr.mickaelbaron.jaxwstutorialexercice1.NotebookService`;
-    * `serviceName = NotebookService` ;
-    * `portName = NotebookPort`.
+  * `endpointInterface = fr.mickaelbaron.jaxwstutorialexercice1.NotebookService`;
+  * `serviceName = NotebookService` ;
+  * `portName = NotebookPort`.
 * Ci-dessous est donné un exemple d'implémentation de la classe `NotebookServiceImpl`. Saisir le code de la classe NotebookServiceImpl. Le corps des méthodes n'est pas très important.
 
 ```java
@@ -94,7 +95,8 @@ import java.util.List;
 
 import javax.jws.WebService;
 
-@WebService(endpointInterface="fr.mickaelbaron.jaxwstutorialexercice1.NotebookService", serviceName="NotebookService", portName="NotebookPort")
+// TODO: définir la classe en service web SOAP
+// en initialisant les attributs `endpointInterface`, `serviceName` et `portName`.
 public class NotebookServiceImpl implements NotebookService {
 
     private List<Person> persons = new ArrayList<Person>();
@@ -156,14 +158,14 @@ public class NotebookWebServicePublisher {
 
 Pour tester le comportement du service web, vous utiliserez l'outil SOAP-UI (voir [atelier 1](http://mbaron.developpez.com/tutoriels/soa/soapui-tests-fonctionnels-services-web/ "atelier 1")).
 
-Nous allons nous intéresser à générer le document WSDL à partir de Maven. 
+Nous allons nous intéresser à générer le document WSDL à partir de Maven.
 
 * Depuis Eclipse, exécuter la configuration d'exécution appelée *wsgen1 (clean and process-classes)*.
 
 * Depuis la ligne de commande, se placer à la racine du projet et exécuter la ligne de commande suivante :
 
-```
-$ mvn clean package
+```sh
+mvn clean package
 ```
 
 * Vérifier depuis le répertoire *target/generated-sources/wsdl* la présence du document WSDL.
