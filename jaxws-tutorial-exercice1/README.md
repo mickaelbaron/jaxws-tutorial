@@ -164,7 +164,7 @@ Nous allons nous intéresser à générer le document WSDL à partir de Maven.
 
 * Depuis la ligne de commande, se placer à la racine du projet et exécuter la ligne de commande suivante :
 
-```sh
+```bash
 mvn clean package
 ```
 

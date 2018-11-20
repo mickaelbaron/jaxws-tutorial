@@ -15,13 +15,13 @@ Dans cet exercice nous allons réaliser deux types de déploiement d'un service 
 
 * Saisir la ligne de commande suivante depuis la racine du projet pour compiler et construire le fichier jar du projet.
 
-```shellscript
+```bash
 mvn clean package
 ```
 
 * Saisir la ligne de commande suivante pour démarrer le projet.
 
-```shellscript
+```bash
 $ java -cp "target/ws.jar" fr.mickaelbaron.jaxwstutorialexercice6.NotebookWebServicePublisher
 Exception in thread "main" java.lang.NoClassDefFoundError: javax/xml/ws/Endpoint
         at fr.mickaelbaron.jaxwstutorialexercice6.NotebookWebServicePublisher.main(NotebookWebServicePublisher.java:10)
@@ -37,25 +37,25 @@ Vous remarquerez que le projet de démarre pas du fait de l'absence de certaines
 * Modifier le fichier _pom.xml_ afin d'ajouter le plugin **maven-dependency-plugin** qui permettra de lister toutes les bibliothèques nécessaires.
 
 ```xml
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>${maven.dependency.version}</version>
-                <executions>
-                    <execution>
-                        <id>copy-dependencies</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-dependency-plugin</artifactId>
+    <version>${maven.dependency.version}</version>
+    <executions>
+        <execution>
+            <id>copy-dependencies</id>
+            <phase>package</phase>
+            <goals>
+                <goal>copy-dependencies</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
 ```
 
 * Saisir les lignes de commande suivantes pour compiler, construire et démarrer le projet.
 
-```shellscript
+```bash
 mvn clean package
 ...
 $ java -cp "target/classes:target/dependency/*" fr.mickaelbaron.jaxwstutorialexercice6.NotebookWebServicePublisher
@@ -107,7 +107,7 @@ Le fichier *sun-jaxws.xml* est utilisé pour configurer l'accès au service web 
 
 * Saisir la ligne de commande suivante pour compiler et construire le projet vers un fichier war.
 
-```shellscript
+```bash
 mvn clean package -P war
 ```
 
@@ -138,13 +138,13 @@ mvn clean package -P war
 
 * Saisir la ligne de commande suivante pour télécharger une image Docker de Tomcat
 
-```shellscript
+```bash
 docker pull tomcat:9.0.12-jre10-slim
 ```
 
 * Enfin, saisir la ligne de commande suivante pour créer un conteneur Docker qui permettra de démarrer une instance de Tomcat. Le fichier `ws.war` contient tous le code et dépendances de ce projet. 
 
-```shellscript
+```bash
 docker run --rm --name helloworldservice-tomcat -v $(pwd)/target/ws.war:/usr/local/tomcat/webapps/ws.war -it -p 8080:8080 tomcat:9.0.12-jre10-slim
 ```
 

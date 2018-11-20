@@ -20,7 +20,7 @@ Avant de démarrer cette série d'exercices sur l'utilisation de l'API JAX-WS, v
 
 > Ces exemples ne supportent pas complètement Java 11 puisque celui-ci ne fournit plus les outils wsimport et wsgen. Par ailleurs, les modules Java (introduit depuis Java 9) ne sont pas utilisés explicitement.
 
-## Remerciements
+## Ressources et Remerciements
 
 Pour aller plus loin, vous pouvez consulter les ressources suivantes :
 
