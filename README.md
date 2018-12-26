@@ -1,6 +1,6 @@
 # JAX-WS Tutoriel
 
-L'objectif de cette deuxième série d'exercices est d'apprendre à manipuler l'API JAX-WS pour le développement de services web étendus à partir de la plateforme de développement Java.
+L'objectif de cette série d'exercices est d'apprendre à manipuler l'API JAX-WS pour le développement de services web étendus à partir de la plateforme de développement Java.
 
 Chaque exercice est fourni dans un dossier avec à l'intérieur un projet Java Maven contenant des classes et des fichiers de configuration qu'il faudra compléter au fur et à mesure des questions.
 
