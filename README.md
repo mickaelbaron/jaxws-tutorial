@@ -22,12 +22,15 @@ Avant de démarrer cette série d'exercices sur l'utilisation de l'API JAX-WS, v
 
 ## Ressources et Remerciements
 
+Retrouver la précédente leçon :
+
+* [Tutoriel sur SOAP-UI pour inspecter et invoquer un service web étendus/SOAP via l’outil SOAP-UI](https://github.com/mickaelbaron/soapui-tutorial).
+
 Pour aller plus loin, vous pouvez consulter les ressources suivantes :
 
-* [Support de cours SOA](http://mbaron.developpez.com/soa/intro/ "Support de cours SOA")
-* [Support de cours WSDL](http://mbaron.developpez.com/soa/wsdl "Support de cours WSDL")
-* [Support de cours SOAP](http://mbaron.developpez.com/soa/soap "Support de cours SOAP")
-* [Support de cours JAX-WS](http://mbaron.developpez.com/soa/jaxws "Support de cours JAX-WS")
-* [Exercices sur le test fonctionnel de services web avec SOAP-UI](http://mbaron.developpez.com/tutoriels/soa/soapui-tests-fonctionnels-services-web "Exercices sur le test fonctionnel de services web avec SOAP-UI")
+* [Support de cours SOA](http://mbaron.developpez.com/soa/intro/ "Support de cours SOA") ;
+* [Support de cours WSDL](http://mbaron.developpez.com/soa/wsdl "Support de cours WSDL") ;
+* [Support de cours SOAP](http://mbaron.developpez.com/soa/soap "Support de cours SOAP") ;
+* [Support de cours JAX-WS](http://mbaron.developpez.com/soa/jaxws "Support de cours JAX-WS").
 
 Je tiens à remercier [Claude Leloup](http://www.developpez.net/forums/u124512/claudeleloup/) pour sa relecture orthographique de cet article.
