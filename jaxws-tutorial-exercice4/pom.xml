@@ -7,12 +7,11 @@
 	<packaging>jar</packaging>
 	<properties>
 		<maven.compiler.version>3.1</maven.compiler.version>
-		<maven.compiler.source>10</maven.compiler.source>
-		<maven.compiler.target>10</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
 
-		<jaxws.version>2.3.1</jaxws.version>
+		<jaxws.version>2.3.2</jaxws.version>
 		<junit.version>4.12</junit.version>
-		<jaxws.maven.version>2.5</jaxws.maven.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -35,9 +34,9 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
+				<groupId>com.sun.xml.ws</groupId>
 				<artifactId>jaxws-maven-plugin</artifactId>
-				<version>${jaxws.maven.version}</version>
+				<version>${jaxws.version}</version>
 				<executions>
 					<execution>
 						<goals>
@@ -47,7 +46,6 @@
 							<packageName>TODO</packageName>
 							<sourceDestDir>TODO</sourceDestDir>
 							<keep>true</keep>
-							<executable>${java.home}/bin/wsimport</executable>
 							<wsdlUrls>
 								<wsdlUrl>TODO</wsdlUrl>
 							</wsdlUrls>
