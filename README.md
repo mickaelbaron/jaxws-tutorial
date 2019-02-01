@@ -12,13 +12,13 @@ Chaque exercice est fourni dans un dossier avec à l'intérieur un projet Java M
 
 Avant de démarrer cette série d'exercices sur l'utilisation de l'API JAX-WS, veuillez préparer votre environnement de développement en installant les outils suivants :
 
-* [Java via OpenJDK](http://jdk.java.net/ "Java 8 à 10")
+* [Java via OpenJDK](http://jdk.java.net/ "Java 8+")
 * [Maven](https://maven.apache.org/ "Maven")
 * [Eclipse](https://www.eclipse.org/ "Eclipse")
 * [SOAP-UI](http://www.soapui.org/ "SOAP-UI")
 * [Docker (exercice 6)](https://www.docker.com/ "Docker")
 
-> Ces exemples ne supportent pas complètement Java 11 puisque celui-ci ne fournit plus les outils wsimport et wsgen. Par ailleurs, les modules Java (introduit depuis Java 9) ne sont pas utilisés explicitement.
+> Ces exemples n'utilisent pas les modules Java (introduits depuis Java 9).
 
 ## Ressources et Remerciements
 

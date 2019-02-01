@@ -20,9 +20,9 @@ Dans cet exercice, nous développons un service web à partir de sa description 
 
 ```xml
 <plugin>
-    <groupId>org.codehaus.mojo</groupId>
+    <groupId>com.sun.xml.ws</groupId>
     <artifactId>jaxws-maven-plugin</artifactId>
-    <version>${jaxws.maven.version}</version>
+    <version>${jaxws.version}</version>
     <executions>
         <execution>
             <goals>
@@ -32,7 +32,6 @@ Dans cet exercice, nous développons un service web à partir de sa description 
                 <packageName>fr.mickaelbaron.jaxwstutorialexercice2</packageName>
                 <sourceDestDir>${project.build.directory}/generated-sources/jaxws-wsimport</sourceDestDir>
                 <keep>true</keep>
-                <executable>${java.home}/bin/wsimport</executable>
                 <wsdlUrls>
                     <wsdlUrl>http://localhost:9991/ws/notebookservice?wsdl</wsdlUrl>
                 </wsdlUrls>

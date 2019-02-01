@@ -18,9 +18,9 @@ Cet exercice consiste à appeler le service web défini depuis l'exercice 1. Des
 
 ```xml
 <plugin>
-    <groupId>org.codehaus.mojo</groupId>
+    <groupId>com.sun.xml.ws</groupId>
     <artifactId>jaxws-maven-plugin</artifactId>
-    <version>${jaxws.maven.version}</version>
+    <version>${jaxws.version}</version>
     <executions>
         <execution>
             <goals>
@@ -30,7 +30,6 @@ Cet exercice consiste à appeler le service web défini depuis l'exercice 1. Des
                 <packageName>fr.mickaelbaron.jaxwstutorialexercice3</packageName>
                 <sourceDestDir>${project.build.directory}/generated-sources/jaxws-wsimport</sourceDestDir>
                 <keep>true</keep>
-                <executable>${java.home}/bin/wsimport</executable>
                 <wsdlUrls>
                     <wsdlUrl>http://localhost:9991/ws/notebookservice?wsdl</wsdlUrl>
                 </wsdlUrls>
