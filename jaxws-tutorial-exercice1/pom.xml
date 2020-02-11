@@ -41,7 +41,7 @@
 							<goal>wsgen</goal>
 						</goals>
 						<configuration>
-							<sei>fr.mickaelbaron.jaxwstutorialexercice1.NotebookServiceImpl</sei>
+							<sei>fr.mickaelbaron.jaxwstutorialexercice1.NoteBookServiceImpl</sei>
 							<genWsdl>true</genWsdl>
 							<keep>true</keep>
 						</configuration>
