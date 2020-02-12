@@ -1,13 +1,11 @@
-/**
- * 
- */
 package fr.mickaelbaron.jaxwstutorialexercice2;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.jws.WebService;
 
+import fr.mickaelbaron.jaxwstutorialexercice1.NoteBookService;
+import fr.mickaelbaron.jaxwstutorialexercice1.Person;
 
 /**
  * @author Reginald.Bourdon
