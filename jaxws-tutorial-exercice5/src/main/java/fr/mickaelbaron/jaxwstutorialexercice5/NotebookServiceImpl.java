@@ -10,6 +10,7 @@ import javax.jws.WebService;
  * @author Mickael BARON (baron.mickael@gmail.com)
  */
 @WebService(endpointInterface = "fr.mickaelbaron.jaxwstutorialexercice5.NotebookService", serviceName = "NotebookService", portName = "NotebookPort")
+@HandlerChain(file = "handler.xml")
 public class NotebookServiceImpl implements NotebookService {
 
 	private List<Person> persons = new ArrayList<Person>();
