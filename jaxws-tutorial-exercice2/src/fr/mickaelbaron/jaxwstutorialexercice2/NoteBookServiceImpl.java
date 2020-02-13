@@ -4,8 +4,8 @@ import java.util.List;
 
 import javax.jws.WebService;
 
-import fr.mickaelbaron.jaxwstutorialexercice1.NoteBookService;
-import fr.mickaelbaron.jaxwstutorialexercice1.Person;
+import fr.mickaelbaron.jaxwstutorialexercice2.NoteBookService;
+import fr.mickaelbaron.jaxwstutorialexercice2.Person;
 
 /**
  * @author Reginald.Bourdon

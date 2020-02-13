@@ -44,7 +44,7 @@
                             <goal>wsimport</goal>
                         </goals>
                         <configuration>
-                            <packageName>fr.mickaelbaron.jaxwstutorialexercice1</packageName>
+                            <packageName>fr.mickaelbaron.jaxwstutorialexercice2</packageName>
                             <sourceDestDir>${project.build.directory}/generated-sources/jaxws-wsimport</sourceDestDir>
                             <keep>true</keep>
                             <wsdlUrls>
