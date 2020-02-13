@@ -7,11 +7,11 @@
 	<version>0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<properties>
-		<maven.compiler.version>3.1</maven.compiler.version>
-		<maven.compiler.source>11</maven.compiler.source>
-		<maven.compiler.target>11</maven.compiler.target>
-
-		<jaxws.version>2.3.2</jaxws.version>
+		<maven.compiler.version>3.5.1</maven.compiler.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jaxws.version>2.3.2</jaxws.version>
 		<junit.version>4.12</junit.version>
 	</properties>
 	<dependencies>
@@ -46,18 +46,18 @@
 				<version>${jaxws.version}</version>
 				<executions>
 					<execution>
-						<goals>
-							<goal>wsimport</goal>
-						</goals>
-						<configuration>
-							<packageName>TODO</packageName>
-							<sourceDestDir>TODO</sourceDestDir>
-							<keep>true</keep>
-							<wsdlUrls>
-								<wsdlUrl>TODO</wsdlUrl>
-							</wsdlUrls>
-						</configuration>
-					</execution>
+                        <goals>
+                            <goal>wsimport</goal>
+                        </goals>
+                        <configuration>
+                            <packageName>fr.mickaelbaron.jaxwstutorialexercice3</packageName>
+                            <sourceDestDir>${project.build.directory}/generated-sources/jaxws-wsimport</sourceDestDir>
+                            <keep>true</keep>
+                            <wsdlUrls>
+                                <wsdlUrl>http://localhost:9991/ws/notebookservice?wsdl</wsdlUrl>
+                            </wsdlUrls>
+                        </configuration>
+                    </execution>
 				</executions>
 			</plugin>
 		</plugins>
