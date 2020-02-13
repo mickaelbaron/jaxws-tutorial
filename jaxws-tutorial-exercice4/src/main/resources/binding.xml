@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bindings
+    wsdlLocation="http://localhost:9991/ws/notebookservice?wsdl"
+    xmlns="http://java.sun.com/xml/ns/jaxws">
+    <enableAsyncMapping>true</enableAsyncMapping>
+</bindings>

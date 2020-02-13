@@ -31,7 +31,30 @@ public class NotebookWebServiceAsynchronousClient extends JFrame {
 		startButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO
+			 // TODO: initialiser un service et un port.
+			   NoteBookService_Service service = new NoteBookService_Service();
+			   NoteBookService noteBookPort = service.getNoteBookPort();			   
+			   
+			   startButton.setEnabled(false);
+         Person newPerson = new Person();
+         newPerson.setName("New Person");
+         newPerson.setAddress("Poitiers");
+
+         textArea.append("addPerson operation has been invoked.\n");
+         
+         noteBookPort.addPersonAsync(newPerson, new AsyncHandler<AddPersonResponse>() {
+
+            @Override
+            public void handleResponse(Response<AddPersonResponse> res) {
+                // TODO: invoquer de manière asynchrone l'opération `addPerson` à partir du port précédent
+                // et faire appel au code suivant.
+                     if (!res.isCancelled() && res.isDone()) {
+                         textArea.append("New Person added.\n");
+                         startButton.setEnabled(true);
+                     }
+                
+            }
+        });         
 			}
 		});
 		
