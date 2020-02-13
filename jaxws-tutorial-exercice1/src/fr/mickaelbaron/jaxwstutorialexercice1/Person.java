@@ -14,6 +14,10 @@ public class Person {
     
     private String address;
     
+    public Person() {
+        
+    }
+    
     public Person(String name, String address) {
         this.name = name;
         this.address = address;
