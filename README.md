@@ -12,10 +12,10 @@ Chaque exercice est fourni dans un dossier avec à l'intérieur un projet Java M
 
 Avant de démarrer cette série d'exercices sur l'utilisation de l'API JAX-WS, veuillez préparer votre environnement de développement en installant les outils suivants :
 
-* [Java via OpenJDK](http://jdk.java.net/ "Java 8+")
+* [Java via OpenJDK](https://jdk.java.net/ "Java 8+")
 * [Maven](https://maven.apache.org/ "Maven")
 * [Eclipse](https://www.eclipse.org/ "Eclipse")
-* [SOAP-UI](http://www.soapui.org/ "SOAP-UI")
+* [SOAP-UI](https://www.soapui.org/ "SOAP-UI")
 * [Docker (exercice 6)](https://www.docker.com/ "Docker")
 
 > Ces exemples n'utilisent pas les modules Java (introduits depuis Java 9).
@@ -28,9 +28,9 @@ Retrouver la précédente leçon :
 
 Pour aller plus loin, vous pouvez consulter les ressources suivantes :
 
-* [Support de cours SOA](http://mbaron.developpez.com/soa/intro/ "Support de cours SOA") ;
-* [Support de cours WSDL](http://mbaron.developpez.com/soa/wsdl "Support de cours WSDL") ;
-* [Support de cours SOAP](http://mbaron.developpez.com/soa/soap "Support de cours SOAP") ;
-* [Support de cours JAX-WS](http://mbaron.developpez.com/soa/jaxws "Support de cours JAX-WS").
+* [Support de cours SOA](https://mickael-baron.fr/soa/introduction-soa "Support de cours SOA") ;
+* [Support de cours WSDL](https://mickael-baron.fr/soa/decrire-configurer-wsdl "Support de cours WSDL") ;
+* [Support de cours SOAP](https://mickael-baron.fr/soa/communiquer-soap "Support de cours SOAP") ;
+* [Support de cours JAX-WS](https://mickael-baron.fr/soa/developper-serviceweb-jaxws "Support de cours JAX-WS").
 
 Je tiens à remercier [Claude Leloup](http://www.developpez.net/forums/u124512/claudeleloup/) pour sa relecture orthographique de cet article.
