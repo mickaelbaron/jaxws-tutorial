@@ -28,9 +28,9 @@ Retrouver la précédente leçon :
 
 Pour aller plus loin, vous pouvez consulter les ressources suivantes :
 
-* [Support de cours SOA](http://mbaron.developpez.com/soa/intro/ "Support de cours SOA") ;
-* [Support de cours WSDL](http://mbaron.developpez.com/soa/wsdl "Support de cours WSDL") ;
-* [Support de cours SOAP](http://mbaron.developpez.com/soa/soap "Support de cours SOAP") ;
-* [Support de cours JAX-WS](http://mbaron.developpez.com/soa/jaxws "Support de cours JAX-WS").
+* [Support de cours SOA](https://mickael-baron.fr/soa/introduction-soa "Support de cours SOA") ;
+* [Support de cours WSDL](https://mickael-baron.fr/soa/decrire-configurer-wsdl "Support de cours WSDL") ;
+* [Support de cours SOAP](https://mickael-baron.fr/soa/communiquer-soap "Support de cours SOAP") ;
+* [Support de cours JAX-WS](https://mickael-baron.fr/soa/developper-serviceweb-jaxws "Support de cours JAX-WS").
 
 Je tiens à remercier [Claude Leloup](http://www.developpez.net/forums/u124512/claudeleloup/) pour sa relecture orthographique de cet article.
