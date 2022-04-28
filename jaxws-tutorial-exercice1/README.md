@@ -65,7 +65,7 @@ public class Person {
 package fr.mickaelbaron.jaxwstutorialexercice1;
 
 import java.util.List;
-import javax.jws.WebService;
+import jakarta.jws.WebService;
 
 // TODO: définir l'interface en service web SOAP
 // en initialisant les attributs `name` et `targetNamespace`.
@@ -93,7 +93,7 @@ package fr.mickaelbaron.jaxwstutorialexercice1;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.jws.WebService;
+import jakarta.jws.WebService;
 
 // TODO: définir la classe en service web SOAP
 // en initialisant les attributs `endpointInterface`, `serviceName` et `portName`.
@@ -145,6 +145,10 @@ public class NotebookServiceImpl implements NotebookService {
 * Afin de tester localement ce service web, définir une classe appelée `NotebookWebServicePublisher` à déposer dans le package déjà créé et saisir le code ci-dessous.
 
 ```java
+package fr.mickaelbaron.jaxwstutorialexercice1;
+
+import jakarta.xml.ws.Endpoint;
+
 public class NotebookWebServicePublisher {
     public static void main(String[] args) throws ClassNotFoundException {
         Endpoint.publish("http://localhost:9991/ws/notebookservice", new NotebookServiceImpl());
@@ -165,9 +169,9 @@ Nous allons nous intéresser à générer le document WSDL à partir de Maven.
 * Depuis la ligne de commande, se placer à la racine du projet et exécuter la ligne de commande suivante :
 
 ```bash
-mvn clean package
+$ mvn clean package
 ```
 
-* Vérifier depuis le répertoire *target/generated-sources/wsdl* la présence du document WSDL.
+* Vérifier depuis le répertoire _target/generated-sources/wsdl_ la présence du document WSDL.
 
-* Déterminer dans le fichier *pom.xml*, le plugin qui permet de générer automatiquement le contrat WSDL.
+* Déterminer dans le fichier _pom.xml_, le plugin qui permet de générer automatiquement le contrat WSDL.

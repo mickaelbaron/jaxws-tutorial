@@ -10,17 +10,9 @@
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 
-		<jaxws.version>2.3.2</jaxws.version>
-		<junit.version>4.12</junit.version>
-		<maven.dependency.version>3.1.1</maven.dependency.version>
+		<jaxws.version>3.0.2</jaxws.version>
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
-			<scope>test</scope>
-		</dependency>
 		<dependency>
 			<groupId>com.sun.xml.ws</groupId>
 			<artifactId>jaxws-rt</artifactId>
@@ -39,20 +31,6 @@
 					<encoding>${project.build.sourceEncoding}</encoding>
 					<generatedSourcesDirectory>${project.build.directory}/generated-sources/jaxws-wsimport</generatedSourcesDirectory>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>${maven.dependency.version}</version>
-				<executions>
-					<execution>
-						<id>copy-dependencies</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 			<plugin>
 				<groupId>com.sun.xml.ws</groupId>

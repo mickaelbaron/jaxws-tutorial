@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<handler-chains xmlns="http://java.sun.com/xml/ns/javaee">
+<handler-chains xmlns="https://jakarta.ee/xml/ns/jakartaee">
     <handler-chain>
        <handler>
            <handler-name>fr.mickaelbaron.jaxwstutorialexercice5.SOAPLoggingHandler</handler-name>

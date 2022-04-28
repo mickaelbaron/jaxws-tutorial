@@ -10,8 +10,7 @@
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 
-		<jaxws.version>2.3.2</jaxws.version>
-		<junit.version>4.12</junit.version>
+		<jaxws.version>3.0.2</jaxws.version>
 	</properties>
 	<dependencies>
 		<dependency>

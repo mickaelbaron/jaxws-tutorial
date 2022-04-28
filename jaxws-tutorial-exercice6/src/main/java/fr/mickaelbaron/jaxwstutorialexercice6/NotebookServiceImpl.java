@@ -3,8 +3,11 @@ package fr.mickaelbaron.jaxwstutorialexercice6;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.jws.WebService;
+import jakarta.jws.WebService;
 
+/**
+ * @author Mickael BARON (baron.mickael@gmail.com)
+ */
 @WebService(endpointInterface="fr.mickaelbaron.jaxwstutorialexercice6.NotebookService", serviceName="NotebookService", portName="NotebookPort")
 public class NotebookServiceImpl implements NotebookService {
 

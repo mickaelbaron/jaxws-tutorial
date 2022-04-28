@@ -7,8 +7,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
-import javax.xml.ws.AsyncHandler;
-import javax.xml.ws.Response;
+
+import jakarta.xml.ws.AsyncHandler;
+import jakarta.xml.ws.Response;
 
 /**
  * @author Mickael BARON (baron.mickael@gmail.com)
@@ -54,6 +55,8 @@ public class NotebookWebServiceAsynchronousClient extends JFrame {
 		});
 		
 		this.pack();
+		this.setSize(400,200);
+		this.setLocationRelativeTo(null);
 		this.setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
