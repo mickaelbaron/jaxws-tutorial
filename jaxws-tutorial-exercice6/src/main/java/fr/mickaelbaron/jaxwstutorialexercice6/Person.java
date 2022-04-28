@@ -1,5 +1,8 @@
 package fr.mickaelbaron.jaxwstutorialexercice6;
 
+/**
+ * @author Mickael BARON (baron.mickael@gmail.com)
+ */
 public class Person {
 
 	private String name;

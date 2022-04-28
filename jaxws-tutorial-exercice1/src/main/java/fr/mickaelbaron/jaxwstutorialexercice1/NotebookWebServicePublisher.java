@@ -1,7 +1,5 @@
 package fr.mickaelbaron.jaxwstutorialexercice1;
 
-import javax.xml.ws.Endpoint;
-
 /**
  * @author Mickael BARON (baron.mickael@gmail.com)
  */

@@ -3,8 +3,7 @@ package fr.mickaelbaron.jaxwstutorialexercice5;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.jws.HandlerChain;
-import javax.jws.WebService;
+import jakarta.jws.WebService;
 
 /**
  * @author Mickael BARON (baron.mickael@gmail.com)

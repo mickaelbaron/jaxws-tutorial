@@ -2,8 +2,11 @@ package fr.mickaelbaron.jaxwstutorialexercice6;
 
 import java.util.List;
 
-import javax.jws.WebService;
+import jakarta.jws.WebService;
 
+/**
+ * @author Mickael BARON (baron.mickael@gmail.com)
+ */
 @WebService(name = "NotebookService", targetNamespace="http://jaxwstutorialexercice6.mickaelbaron.fr")
 public interface NotebookService {
 

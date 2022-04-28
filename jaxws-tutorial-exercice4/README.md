@@ -15,18 +15,21 @@ Cet exercice consiste à appeler le service web défini dans l'exercice 1. Un cl
 
 * Importer le projet Maven **jaxws-tutorial-exercice4** (**File -> Import -> Maven -> Existing Maven Projects**, choisir le répertoire du projet puis faire **Finish**.
 
-* Pour modifier la génération des classes artifacts des informations supplémentaires peuvent être indiquées dans un fichier binding. Créer un fichier nommé *binding.xml* stocké dans le répertoire *src/jaxws* dont le contenu est le suivant.
+* Pour modifier la génération des classes artifacts des informations supplémentaires peuvent être indiquées dans un fichier binding. Créer un fichier nommé _binding.xml_ stocké dans le répertoire _src/jaxws_ dont le contenu est le suivant.
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<bindings
-    wsdlLocation="http://localhost:9991/ws/NotebookService?wsdl"
-    xmlns="http://java.sun.com/xml/ns/jaxws">
-    <enableAsyncMapping>true</enableAsyncMapping>
+<bindings 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	wsdlLocation="http://localhost:9991/ws/notebookservice?wsdl"
+	xmlns="https://jakarta.ee/xml/ns/jaxws">
+	<bindings node="wsdl:definitions">
+		<enableAsyncMapping>true</enableAsyncMapping>
+	</bindings>
 </bindings>
 ```
 
-* Compléter le fichier de description Maven *pom.xml* existant afin de générer les classes artifacts (identique à l'exercice 2 et 3). Pour la prise en compte du fichier *binding.xml* vous ajouterez ces paramètres dans le contenu de la balise configuration.
+* Compléter le fichier de description Maven _pom.xml_ existant afin de générer les classes artifacts (identique à l'exercice 2 et 3). Pour la prise en compte du fichier _binding.xml_ vous ajouterez ces paramètres dans le contenu de la balise configuration.
 
 ```xml
 <configuration>
@@ -39,9 +42,9 @@ Cet exercice consiste à appeler le service web défini dans l'exercice 1. Un cl
 </configuration>
 ```
 
-* Depuis Eclipse, exécuter la configuration d'exécution appelée *wsimport (clean and generate-sources)* comme pour les exercices 2 et 3.
+* Depuis Eclipse, exécuter la configuration d'exécution appelée _wsimport (clean and generate-sources)_ comme pour les exercices 2 et 3.
 
-* Compléter la classe _NotebookWebServiceAsynchronousClient_.
+* Compléter la classe `NotebookWebServiceAsynchronousClient`.
 
 ```java
 package fr.mickaelbaron.jaxwstutorialexercice4;
@@ -53,8 +56,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
-import javax.xml.ws.AsyncHandler;
-import javax.xml.ws.Response;
+
+import jakarta.xml.ws.AsyncHandler;
+import jakarta.xml.ws.Response;
 
 public class NotebookWebServiceAsynchronousClient extends JFrame {
 
@@ -93,6 +97,8 @@ public class NotebookWebServiceAsynchronousClient extends JFrame {
         });
 
         this.pack();
+        this.setSize(400,200);
+		this.setLocationRelativeTo(null);
         this.setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }

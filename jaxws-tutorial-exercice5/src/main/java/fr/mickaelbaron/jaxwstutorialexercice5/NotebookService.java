@@ -2,7 +2,7 @@ package fr.mickaelbaron.jaxwstutorialexercice5;
 
 import java.util.List;
 
-import javax.jws.WebService;
+import jakarta.jws.WebService;
 
 /**
  * @author Mickael BARON (baron.mickael@gmail.com)

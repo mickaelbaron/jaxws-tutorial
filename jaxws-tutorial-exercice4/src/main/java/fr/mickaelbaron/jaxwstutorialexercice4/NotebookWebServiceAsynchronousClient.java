@@ -7,8 +7,6 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
-import javax.xml.ws.AsyncHandler;
-import javax.xml.ws.Response;
 
 /**
  * @author Mickael BARON (baron.mickael@gmail.com)
