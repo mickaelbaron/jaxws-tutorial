@@ -2,9 +2,9 @@ package fr.mickaelbaron.jaxwstutorialexercice3;
 
 import java.util.List;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author Mickael BARON (baron.mickael@gmail.com)
@@ -13,41 +13,46 @@ public class NotebookWebServiceTest {
 
 	protected NotebookService notebookPort;
 
-	@Before
+	@BeforeEach
 	public void setup() {
+		NotebookService_Service notebookService = new NotebookService_Service();
+		notebookPort = notebookService.getNotebookPort();
 	}
 
 	@Test
 	public void addPersonTest() {
 		// Given
+		Person myPerson = new Person();
+		myPerson.setName("NewPerson");
+		myPerson.setAddress("NewAddress");
 
 		// When
-		// To complete
+		boolean addPerson = notebookPort.addPerson(myPerson);
 
 		// Then
-		Assert.assertTrue(addPerson);
+		Assertions.assertTrue(addPerson);
 	}
 
 	@Test
 	public void getPersonsTest() {
 		// Given
 		// When
-		// To complete
+		List<Person> persons = notebookPort.getPersons();
 
 		// Then
-		Assert.assertTrue(persons.size() >= 2);
+		Assertions.assertTrue(persons.size() >= 2);
 	}
 
 	@Test
 	public void getPersonAtTest() {
 		// Given
-		// To complete
+		String name = "Mickael Baron";
 
 		// When
-		// To complete
+		Person personAt = notebookPort.getPersonAt(name);
 
 		// Then
-		Assert.assertNotNull(personAt);
-		Assert.assertEquals(personAt.getAddress(), "Migné-Auxances");
+		Assertions.assertNotNull(personAt);
+		Assertions.assertEquals(personAt.getAddress(), "Migné-Auxances");
 	}
 }
