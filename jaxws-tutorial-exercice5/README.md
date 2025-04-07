@@ -1,21 +1,21 @@
-# Exercice 5 (JAX-WS) : ajouter un intercepteur (handler) à un service web
+# Exercice 5 (JAX-WS) : ajouter un intercepteur (handler) à un service web
 
 Dans cet exercice un intercepteur est ajouté au service web décrivant le carnet d'adresses. L'intercepteur a pour fonction de filtrer les messages SOAP de telle sorte que le traitement de l'opération `getPersons()` ne soit pas réalisé.
 
 ## But
 
-* Implémentation handler côté serveur.
-* Configuration du service web.
-* Filtrage par opération.
-* Développer un client d'un service web.
+- Implémentation handler côté serveur.
+- Configuration du service web.
+- Filtrage par opération.
+- Développer un client d'un service web.
 
 ## Étapes à suivre
 
-* Importer le projet Maven **jaxws-tutorial-exercice5** (**File -> Import -> Maven -> Existing Maven Projects**, choisir le répertoire du projet puis faire **Finish**.
+- Ouvrir le dossier du projet Maven **jaxws-tutorial-exercice5**.
 
-* Dans la classe `NotebookServiceImpl`, ajouter l'annotation `@HandlerChain(file = "handler.xml")` au niveau de la description de la classe.
+- Dans la classe `NotebookServiceImpl`, ajouter l'annotation `@HandlerChain(file = "handler.xml")` au niveau de la description de la classe.
 
-* Ajouter un fichier *handler.xml*, au niveau du répertoire *src/main/resources*.
+- Ajouter un fichier _handler.xml_, au niveau du répertoire _src/main/resources_.
 
 ```xml
 <handler-chains xmlns="https://jakarta.ee/xml/ns/jakartaee">
@@ -28,7 +28,7 @@ Dans cet exercice un intercepteur est ajouté au service web décrivant le carne
 </handler-chains>
 ```
 
-* Ajouter une nouvelle classe intitulée `SOAPLoggingHandler` dont le code est défini de la manière suivante.
+- Ajouter une nouvelle classe intitulée `SOAPLoggingHandler` dont le code est défini de la manière suivante.
 
 ```java
 package fr.mickaelbaron.jaxwstutorialexercice5;
@@ -93,6 +93,6 @@ public class SOAPLoggingHandler implements SOAPHandler<SOAPMessageContext> {
 }
 ```
 
-* Exécuter la classe `NotebookWebServicePublisher` pour démarrer votre service web.
+- Exécuter la classe `NotebookWebServicePublisher` pour démarrer votre service web.
 
-* À partir de l'outil SOAP-UI (voir atelier 1), vérifier que l'appel à l'opération `getPersons` retourne une réponse vide.
+- À partir de l'outil SOAP-UI (voir atelier 1), vérifier que l'appel à l'opération `getPersons` retourne une réponse vide.

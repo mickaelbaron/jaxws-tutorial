@@ -1,35 +1,35 @@
-# Exercice 4 (JAX-WS): développer un client de service web en mode asynchrone
+# Exercice 4 (JAX-WS): développer un client de service web en mode asynchrone
 
-Cet exercice consiste à appeler le service web défini dans l'exercice 1. Un client lourd défini via une interface graphique SWING est utilisé pour invoquer l'opération `addPerson(...)` en mode asynchrone. L'intérêt de cet exercice est de montrer comment paramétrer la génération des artifacts via **wsimport** pour le mode asynchrone.
+Cet exercice consiste à appeler le service web défini dans l'exercice 1\. Un client lourd défini via une interface graphique SWING est utilisé pour invoquer l'opération `addPerson(...)` en mode asynchrone. L'intérêt de cet exercice est de montrer comment paramétrer la génération des artifacts via **wsimport** pour le mode asynchrone.
 
 ## But
 
-* Développer un client d'un service web.
-* Appel asynchrone de service web.
-* Outil **wsimport**.
-* Client lourd via une interface graphique SWING.
+- Développer un client d'un service web.
+- Appel asynchrone de service web.
+- Outil **wsimport**.
+- Client lourd via une interface graphique SWING.
 
 ## Étapes à suivre
 
-* Assurez-vous que le programme principal du premier exercice est en cours d'exécution et que le WSDL du service web est toujours accessible.
+- Assurez-vous que le programme principal du premier exercice est en cours d'exécution et que le WSDL du service web est toujours accessible.
 
-* Importer le projet Maven **jaxws-tutorial-exercice4** (**File -> Import -> Maven -> Existing Maven Projects**, choisir le répertoire du projet puis faire **Finish**.
+- Ouvrir le dossier du projet Maven **jaxws-tutorial-exercice4**.
 
-* Pour modifier la génération des classes artifacts des informations supplémentaires peuvent être indiquées dans un fichier binding. Créer un fichier nommé _binding.xml_ stocké dans le répertoire _src/jaxws_ dont le contenu est le suivant.
+- Pour modifier la génération des classes artifacts des informations supplémentaires peuvent être indiquées dans un fichier binding. Créer un fichier nommé _binding.xml_ stocké dans le répertoire _src/jaxws_ dont le contenu est le suivant.
 
 ```xml
 <bindings 
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-	wsdlLocation="http://localhost:9991/ws/notebookservice?wsdl"
-	xmlns="https://jakarta.ee/xml/ns/jaxws">
-	<bindings node="wsdl:definitions">
-		<enableAsyncMapping>true</enableAsyncMapping>
-	</bindings>
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    wsdlLocation="http://localhost:9991/ws/notebookservice?wsdl"
+    xmlns="https://jakarta.ee/xml/ns/jaxws">
+    <bindings node="wsdl:definitions">
+        <enableAsyncMapping>true</enableAsyncMapping>
+    </bindings>
 </bindings>
 ```
 
-* Compléter le fichier de description Maven _pom.xml_ existant afin de générer les classes artifacts (identique à l'exercice 2 et 3). Pour la prise en compte du fichier _binding.xml_ vous ajouterez ces paramètres dans le contenu de la balise configuration.
+- Compléter le fichier de description Maven _pom.xml_ existant afin de générer les classes artifacts (identique à l'exercice 2 et 3). Pour la prise en compte du fichier _binding.xml_ vous ajouterez ces paramètres dans le contenu de la balise configuration.
 
 ```xml
 <configuration>
@@ -42,9 +42,13 @@ Cet exercice consiste à appeler le service web défini dans l'exercice 1. Un cl
 </configuration>
 ```
 
-* Depuis Eclipse, exécuter la configuration d'exécution appelée _wsimport (clean and generate-sources)_ comme pour les exercices 2 et 3.
+- Exécuter la ligne de commande suivante à la racine de votre projet.
 
-* Compléter la classe `NotebookWebServiceAsynchronousClient`.
+```bash
+mvn clean generate-sources
+```
+
+- Compléter la classe `NotebookWebServiceAsynchronousClient`.
 
 ```java
 package fr.mickaelbaron.jaxwstutorialexercice4;
@@ -98,7 +102,7 @@ public class NotebookWebServiceAsynchronousClient extends JFrame {
 
         this.pack();
         this.setSize(400,200);
-		this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
@@ -109,6 +113,6 @@ public class NotebookWebServiceAsynchronousClient extends JFrame {
 }
 ```
 
-* Exécuter le programme, le résultat attendu est celui montré sur la figure ci-dessous.
+- Exécuter le programme, le résultat attendu est celui montré sur la figure ci-dessous.
 
 ![Swing exercice 4](./images/exercice4-swing.png "Swing exercice 4")

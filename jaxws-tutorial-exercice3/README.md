@@ -1,20 +1,20 @@
-# Exercice 3 (JAX-WS) : développer un client de service web en mode synchrone
+# Exercice 3 (JAX-WS) : développer un client de service web en mode synchrone
 
-Cet exercice consiste à appeler le service web défini depuis l'exercice 1. Des tests unitaires ont été définis pour invoquer les différentes méthodes.
+Cet exercice consiste à appeler le service web défini depuis l'exercice 1\. Des tests unitaires ont été définis pour invoquer les différentes méthodes.
 
 ## But
 
-* Développer un client d'un service web.
-* Appel synchrone de service web.
-* Outil **wsimport** et test d'intégration.
+- Développer un client d'un service web.
+- Appel synchrone de service web.
+- Outil **wsimport** et test d'intégration.
 
 ## Étapes à suivre
 
-* Assurez-vous que le programme principal de l'exercice 1 est en cours d'exécution et que le WSDL du service web est toujours accessible.
+- Assurez-vous que le programme principal de l'exercice 1 est en cours d'exécution et que le WSDL du service web est toujours accessible.
 
-* Importer le projet Maven **jaxws-tutorial-exercice3** (**File -> Import -> Maven -> Existing Maven Projects**, choisir le répertoire du projet puis faire **Finish**.
+- Ouvrir le dossier du projet Maven **jaxws-tutorial-exercice3**.
 
-* Compléter le fichier de description Maven *pom.xml* existant afin de générer les classes artifacts.
+- Compléter le fichier de description Maven _pom.xml_ existant afin de générer les classes artifacts.
 
 ```xml
 <plugin>
@@ -39,22 +39,28 @@ Cet exercice consiste à appeler le service web défini depuis l'exercice 1. Des
 </plugin>
 ```
 
-* Depuis Eclipse, exécuter la configuration d'exécution appelée *wsimport3 (clean and generate-sources)*. Si vous rencontrez des soucis avec l'intégration Maven sous Eclipse, exécuter la ligne de commande suivante à la racine de votre projet `$ mvn clean generate-sources`. Un ensemble de classes sera généré par l'outil **wsimport** et localisé dans le répertoire *./target/generated-sources/jaxws-wsimport*. Ces classes ne doivent pas être modifiées puisqu'elles sont générées automatiquement.
+- Exécuter la ligne de commande suivante à la racine de votre projet.
 
-* Compléter la classe de test `NotebookWebServiceTest` afin d'accéder au port du service puis exécuter les tests unitaires.
+```bash
+mvn clean generate-sources
+```
+
+Un ensemble de classes sera généré par l'outil **wsimport** et localisé dans le répertoire _./target/generated-sources/jaxws-wsimport_. Ces classes ne doivent pas être modifiées puisqu'elles sont générées automatiquement.
+
+- Compléter la classe de test `NotebookWebServiceTest` afin d'accéder au port du service puis exécuter les tests unitaires.
 
 ```java
 package fr.mickaelbaron.jaxwstutorialexercice3;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class NotebookWebServiceTest {
 
     protected NotebookService notebookPort;
 
-    @Before
+	@BeforeEach
     public void setup() {
         NotebookService_Service notebookService = new NotebookService_Service();
         notebookPort = notebookService.getNotebookPort();
@@ -71,7 +77,7 @@ public class NotebookWebServiceTest {
         // TODO: appeler l'opération `addPerson`.
 
         // Then
-        Assert.assertTrue(addPerson);
+        Assertions.assertTrue(addPerson);
     }
 
     @Test
@@ -81,7 +87,7 @@ public class NotebookWebServiceTest {
         // TODO: appeler l'opération `getPersons`.
 
         // Then
-        Assert.assertTrue(persons.size() >= 2);
+        Assertions.assertTrue(persons.size() >= 2);
     }
 
     @Test
@@ -93,8 +99,8 @@ public class NotebookWebServiceTest {
         // TODO: appeler l'opération `getPersonAt` avec la variable précédente.
 
         // Then
-        Assert.assertNotNull(personAt);
-        Assert.assertEquals(personAt.getAddress(), "Migné-Auxances");
+        Assertions.assertNotNull(personAt);
+        Assertions.assertEquals(personAt.getAddress(), "Migné-Auxances");
     }
 }
 ```

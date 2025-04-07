@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>fr.mickaelbaron</groupId>
@@ -6,11 +7,11 @@
 	<version>0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<properties>
-		<maven.compiler.version>3.1</maven.compiler.version>
+		<maven.compiler.version>3.14.0</maven.compiler.version>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 
-		<jaxws.version>3.0.2</jaxws.version>
+		<jaxws.version>4.0.3</jaxws.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -29,7 +30,8 @@
 					<source>${maven.compiler.source}</source>
 					<target>${maven.compiler.target}</target>
 					<encoding>${project.build.sourceEncoding}</encoding>
-					<generatedSourcesDirectory>${project.build.directory}/generated-sources/jaxws-wsimport</generatedSourcesDirectory>
+					<generatedSourcesDirectory>
+						${project.build.directory}/generated-sources/jaxws-wsimport</generatedSourcesDirectory>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -43,7 +45,8 @@
 						</goals>
 						<configuration>
 							<packageName>fr.mickaelbaron.jaxwstutorialexercice4</packageName>
-							<sourceDestDir>${project.build.directory}/generated-sources/jaxws-wsimport</sourceDestDir>
+							<sourceDestDir>
+								${project.build.directory}/generated-sources/jaxws-wsimport</sourceDestDir>
 							<keep>true</keep>
 							<wsdlUrls>
 								<wsdlUrl>http://localhost:9991/ws/notebookservice?wsdl</wsdlUrl>

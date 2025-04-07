@@ -7,17 +7,17 @@
 	<version>0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<properties>
-		<maven.compiler.version>3.8.1</maven.compiler.version>
+		<maven.compiler.version>3.14.0</maven.compiler.version>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 
-		<jaxws.version>3.0.2</jaxws.version>
-		<junit.version>4.13.2</junit.version>
+		<jaxws.version>4.0.3</jaxws.version>
+		<junit.version>5.12.1</junit.version>
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
 			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
@@ -37,7 +37,8 @@
 					<source>${maven.compiler.source}</source>
 					<target>${maven.compiler.target}</target>
 					<encoding>${project.build.sourceEncoding}</encoding>
-					<generatedSourcesDirectory>${project.build.directory}/generated-sources/jaxws-wsimport</generatedSourcesDirectory>
+					<generatedSourcesDirectory>
+						${project.build.directory}/generated-sources/jaxws-wsimport</generatedSourcesDirectory>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -51,7 +52,8 @@
 						</goals>
 						<configuration>
 							<packageName>fr.mickaelbaron.jaxwstutorialexercice3</packageName>
-							<sourceDestDir>${project.build.directory}/generated-sources/jaxws-wsimport</sourceDestDir>
+							<sourceDestDir>
+								${project.build.directory}/generated-sources/jaxws-wsimport</sourceDestDir>
 							<keep>true</keep>
 							<wsdlUrls>
 								<wsdlUrl>http://localhost:9991/ws/notebookservice?wsdl</wsdlUrl>
